@@ -10,7 +10,7 @@ public class DeluxePizza extends Pizza {
             this.deluxPrice += 400;
         }
         //for extra cheese and toppings
-        super.addExtraCheese();
-        super.addExtraToppings();
+        addExtraCheese();
+        addExtraToppings();
     }
 }
