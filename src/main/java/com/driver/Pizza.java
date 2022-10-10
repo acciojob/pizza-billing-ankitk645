@@ -36,9 +36,14 @@ public class Pizza {
 
     public void addExtraToppings(){
         if(!this.isToppingsAdded){
-            this.price += 70;
+            if(isVeg)
+                this.extraToppings += 70;
+            else
+                this.extraToppings += 120;
+
+            this.price += this.extraToppings;
             this.isToppingsAdded = true;
-            this.extraToppings += 70;
+
             this.bill += "Extra Toppings Added: "+this.extraToppings+"\n";
         }
     }
